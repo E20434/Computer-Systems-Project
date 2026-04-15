@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "ravindu pathirage",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 198.6, "left": -246.8, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -124.8, "left": 43.24, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 8.3, "left": -470.6, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 147.95,
+      "left": -172.8,
+      "attrs": { "value": "2000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 147.95,
+      "left": -105.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "chip-custom-ultrasonic-sensor",
+      "id": "chip1",
+      "top": -94.98,
+      "left": -187.2,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "r2:1", "r1:2", "green", [ "v0", "h-9.6" ] ],
+    [ "esp:5V", "bb1:tp.25", "red", [ "h0" ] ],
+    [ "esp:GND.1", "bb1:tn.24", "black", [ "h0.15", "v192" ] ],
+    [ "r1:1", "bb1:tn.5", "green", [ "v67.2" ] ],
+    [ "r2:2", "bb1:19t.a", "green", [ "v96", "h-1.2" ] ],
+    [ "r1:2", "bb1:12t.a", "green", [ "v96", "h-1.2" ] ],
+    [ "esp:18", "bb1:12t.c", "cyan", [ "h19.2", "v153.6" ] ],
+    [ "pot1:GND", "bb1:tn.1", "black", [ "v0" ] ],
+    [ "pot1:VCC", "bb1:tp.1", "red", [ "v0" ] ],
+    [ "pot1:SIG", "chip1:DIST_IN", "purple", [ "v38.4", "h114.8", "v-240", "h238.19" ] ],
+    [ "chip1:VCC", "bb1:tp.2", "red", [ "h-19.2", "v297.6" ] ],
+    [ "chip1:GND", "bb1:tn.1", "black", [ "h-86.4", "v297.7" ] ],
+    [ "chip1:TRIG", "esp:5", "green", [ "h-28.8", "v19.2" ] ],
+    [ "chip1:ECHO", "bb1:19t.b", "green", [ "v326.4", "h30.61" ] ]
+  ],
+  "dependencies": {}
+}

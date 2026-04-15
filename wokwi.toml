@@ -1,0 +1,8 @@
+[wokwi]
+version = 1
+firmware = ".pio/build/esp32dev/firmware.elf"
+elf = ".pio/build/esp32dev/firmware.elf"
+
+[[chip]]
+name = "custom-ultrasonic-sensor"
+binary = "custom-ultrasonic-sensor.chip.wasm"

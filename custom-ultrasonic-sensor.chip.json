@@ -1,0 +1,12 @@
+{
+  "name": "custom-ultrasonic-sensor",
+  "author": "R.S. PATHIRAGE",
+  "pins": [
+    "VCC",
+    "GND",
+    "TRIG",
+    "ECHO",
+    "DIST_IN"
+  ],
+  "controls": []
+}
