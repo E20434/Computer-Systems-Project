@@ -5,7 +5,6 @@
   "parts": [
     { "type": "wokwi-breadboard-half", "id": "bb1", "top": 198.6, "left": -246.8, "attrs": {} },
     { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -124.8, "left": 43.24, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "pot1", "top": 8.3, "left": -470.6, "attrs": {} },
     {
       "type": "wokwi-resistor",
       "id": "r1",
@@ -23,8 +22,15 @@
     {
       "type": "chip-custom-ultrasonic-sensor",
       "id": "chip1",
-      "top": -94.98,
-      "left": -187.2,
+      "top": -133.38,
+      "left": -168,
+      "attrs": {}
+    },
+    {
+      "type": "chip-custom-watertank-simulator",
+      "id": "chip2",
+      "top": -238.98,
+      "left": -283.2,
       "attrs": {}
     }
   ],
@@ -38,13 +44,14 @@
     [ "r2:2", "bb1:19t.a", "green", [ "v96", "h-1.2" ] ],
     [ "r1:2", "bb1:12t.a", "green", [ "v96", "h-1.2" ] ],
     [ "esp:18", "bb1:12t.c", "cyan", [ "h19.2", "v153.6" ] ],
-    [ "pot1:GND", "bb1:tn.1", "black", [ "v0" ] ],
-    [ "pot1:VCC", "bb1:tp.1", "red", [ "v0" ] ],
-    [ "pot1:SIG", "chip1:DIST_IN", "purple", [ "v38.4", "h114.8", "v-240", "h238.19" ] ],
     [ "chip1:VCC", "bb1:tp.2", "red", [ "h-19.2", "v297.6" ] ],
     [ "chip1:GND", "bb1:tn.1", "black", [ "h-86.4", "v297.7" ] ],
     [ "chip1:TRIG", "esp:5", "green", [ "h-28.8", "v19.2" ] ],
-    [ "chip1:ECHO", "bb1:19t.b", "green", [ "v326.4", "h30.61" ] ]
+    [ "chip1:ECHO", "bb1:19t.b", "green", [ "h49.81", "v364.8", "h-38.4" ] ],
+    [ "chip2:LVL_OUT", "chip1:DIST_IN", "blue", [ "h165.01", "v115.2" ] ],
+    [ "chip2:VCC", "bb1:tp.1", "red", [ "h-28.8", "v441.3" ] ],
+    [ "chip2:GND", "bb1:tn.1", "black", [ "h-9.6", "v441.7" ] ],
+    [ "esp:4", "chip2:PUMP_IN", "gold", [ "h48", "v-240", "h-326.4" ] ]
   ],
   "dependencies": {}
 }

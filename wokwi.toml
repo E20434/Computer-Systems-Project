@@ -6,3 +6,7 @@ elf = ".pio/build/esp32dev/firmware.elf"
 [[chip]]
 name = "custom-ultrasonic-sensor"
 binary = "custom-ultrasonic-sensor.chip.wasm"
+
+[[chip]]
+name = "custom-watertank-simulator"
+binary = "custom-watertank-simulator.chip.wasm"
