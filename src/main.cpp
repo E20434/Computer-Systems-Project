@@ -4,7 +4,7 @@
 const int  trigPin = 5;
 const int  echoPin = 18;
 const int pumpPin = 4;
-const int waterUsePin = 0; // Make sure this connects to USE_OUT in diagram.json
+const int waterUsePin = 6; // Make sure this connects to USE_OUT in diagram.json
 
 // Define variables
 long duration;

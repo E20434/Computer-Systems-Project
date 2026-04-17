@@ -6,7 +6,7 @@
 // --- MODE TOGGLE ---
 // 0 = Manual Mode (UI Sliders)
 // 1 = Automated Mode (Reads from scenario.h)
-#define SIMULATION_MODE 1 
+#define SIMULATION_MODE 0 
 
 // --- TANK CONFIGURATION ---
 #define TANK_HEIGHT_CM 200.0f

@@ -4,7 +4,13 @@
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-breadboard-half", "id": "bb1", "top": 198.6, "left": -246.8, "attrs": {} },
-    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -124.8, "left": 43.24, "attrs": {} },
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": -124.98,
+      "left": 100.57,
+      "attrs": {}
+    },
     {
       "type": "wokwi-resistor",
       "id": "r1",
@@ -43,7 +49,7 @@
     [ "r1:1", "bb1:tn.5", "green", [ "v67.2" ] ],
     [ "r2:2", "bb1:19t.a", "green", [ "v96", "h-1.2" ] ],
     [ "r1:2", "bb1:12t.a", "green", [ "v96", "h-1.2" ] ],
-    [ "esp:18", "bb1:12t.c", "cyan", [ "h19.2", "v153.6" ] ],
+    [ "esp:18", "bb1:12t.c", "cyan", [ "h-19.25", "v268.8" ] ],
     [ "chip1:VCC", "bb1:tp.2", "red", [ "h-19.2", "v297.6" ] ],
     [ "chip1:GND", "bb1:tn.1", "black", [ "h-86.4", "v297.7" ] ],
     [ "chip1:TRIG", "esp:5", "green", [ "h-28.8", "v19.2" ] ],
@@ -51,8 +57,8 @@
     [ "chip2:LVL_OUT", "chip1:DIST_IN", "blue", [ "h165.01", "v115.2" ] ],
     [ "chip2:VCC", "bb1:tp.1", "red", [ "h-28.8", "v441.3" ] ],
     [ "chip2:GND", "bb1:tn.1", "black", [ "h-9.6", "v441.7" ] ],
-    [ "esp:4", "chip2:PUMP_IN", "gold", [ "h48", "v-240", "h-326.4" ] ],
-    [ "chip2:USE_OUT", "esp:0", "orange", [ "h366.61", "v278.4" ] ]
+    [ "esp:4", "chip2:PUMP_IN", "gold", [ "h-19.25", "v-220.8", "h-393.6", "v48" ] ],
+    [ "esp:6", "chip2:USE_OUT", "orange", [ "h-86.45", "v-153.6" ] ]
   ],
   "dependencies": {}
 }
