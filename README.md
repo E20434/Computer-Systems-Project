@@ -14,7 +14,7 @@ Click the PlatformIO **Build** button (the `✓` checkmark icon in the bottom bl
 **2. Install the Wokwi CLI**
 The custom sensor is written in C and must be compiled into a WebAssembly (`.wasm`) file. Open a PowerShell terminal in VS Code and run:
 ```powershell
-iwr [https://wokwi.com/ci/install.ps1](https://wokwi.com/ci/install.ps1) -useb | iex
+iwr https://wokwi.com/ci/install.ps1 -useb | iex
 ```
 *(Note: Close and reopen your terminal after this installs so Windows recognizes the command).*
 
@@ -23,6 +23,7 @@ Make sure your terminal is in the project's root folder, then run:
 ```powershell
 wokwi-cli chip compile custom-ultrasonic-sensor.c -o custom-ultrasonic-sensor.chip.wasm
 ```
+do the above for all the custom chips 
 
 **4. Start the Simulator**
 Open the `diagram.json` file. Click the **Wokwi Play button** in the top-right corner of the editor (or press `Ctrl+Shift+P` and select `Wokwi: Start Simulator`). 
